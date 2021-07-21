@@ -1,0 +1,50 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+  <!-- Section: Contact v.1 -->
+<section class="my-5">
+
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Thank You!</h2>
+    <!-- Section description -->
+    <p class="text-center w-responsive mx-auto pb-5">Thanks for submitting feedback to our website.
+         Your submission has been recieved, check your email for our response!
+    </p>
+    <br>
+    <br>
+    <br>
+  <div class="container">
+    <div class="col-lg-5">
+    <table class="table" style="margin-left: 90%;">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Name</th>
+          <td><%= contact.fullName %></td>
+        
+        </tr>
+        <tr>
+          <th scope="row">Email</th>
+          <td><%= contact.email %></td>
+        
+        </tr>
+        <tr>
+          <th scope="row">Subject</th>
+        
+          <td><%= contact.subject %></td>
+        </tr>
+        <tr>
+          <th scope="row">Comment</th>
+          <td><%= contact.comment %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+    <!--end of contact message-->
+    <!-- End your project here-->
+<%- include('layouts/footer.ejs') %>

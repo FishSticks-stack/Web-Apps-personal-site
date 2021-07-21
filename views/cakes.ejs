@@ -1,0 +1,49 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+
+    <!-- Start your project here-->
+    
+
+  <div class="container z-depth-1 my-5 py-5">
+  
+
+    <!-- Section: Block Content -->
+    <section>
+  
+      <!-- Modal -->
+      <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+              <iframe id="player" class="embed-responsive-item" src="https://www.youtube.com/embed/7MUISDJ5ZZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">video</h6>
+      <h3 class="font-weight-bold text-center dark-grey-text pb-2">Vanilla Cake</h3>
+      <hr class="w-header my-4">
+      <p class="lead text-center text-muted pt-2 mb-5">Learn how to make the best vanilla cake – this cake is soft, moist, rich and covered 
+          <br>with amazing cream cheese vanilla frosting.</p>
+  
+      <div class="row">
+        <div class="col-md-8 mx-auto mb-4" style="padding-left: 10%;">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/qtlhdIfojmc" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+              
+  
+        </div>
+      </div>
+  
+    </section>
+    <!-- Section: Block Content -->
+  
+    
+  </div>
+
+    <!-- End your project here-->
+    <%- include('layouts/footer.ejs') %>
