@@ -1,0 +1,60 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+  <!-- Section: Contact v.1 -->
+<section class="my-5">
+
+  <div class="container">
+    <div class="col-lg-5" style="margin-left: 30%;">
+
+        <form action="/blogsubmitted" method="POST">
+            <div class="container" style="margin-top: 10%;">
+                <div class="">
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                    <h1 style="text-align: center;" >Articles</h1>
+
+                    <label class="form-label" for="form4Example1">Title</label>
+                    <input type="text" id="form4Example1" class="form-control" name="title">
+                    
+                    </div>
+        
+                    <!-- Message input -->
+                    <div class="form-outline mb-4">
+                    <label class="form-label" for="form4Example3">Content</label>   
+                    <textarea class="form-control" id="form4Example3" rows="4" name="content"></textarea>
+                    
+                    </div>
+                
+                
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mb-4 warm-flame-gradient">Submit</button>
+                </div>    
+            </div>
+        </form>
+
+        
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Date</th>
+          <th scope="col">Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let a of articles)
+        { %>
+          <tr>
+            <td><%= a.title %></td>
+            <td><%= a.date %></td>
+            <td><%= a.content %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+  </div>
+    <!--end of contact message-->
+    <!-- End your project here-->
+<%- include('layouts/footer.ejs') %>

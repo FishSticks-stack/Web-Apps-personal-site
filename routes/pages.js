@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const Contact = require('../models/contact');
+const Article = require('../models/blog');
 
 const router = express.Router();
 
@@ -52,6 +53,19 @@ router.post('/thanks', (req, res) => {
 
 router.get('/blog', (req, res) => {
     res.render('blog');
+});
+
+router.post('/blogsubmitted', (req, res) => {
+    const title = req.body.title;
+    const content = req.body.content;
+    const date = new Date().toLocaleDateString();
+
+    const article = new Article(title, date, content);
+    article.save();
+
+    const articles = article.findAll();
+    
+    res.render('blogsubmitted', {articles: articles});
 });
 
 module.exports = router;
