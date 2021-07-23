@@ -15,6 +15,9 @@
 
                     <label class="form-label" for="form4Example1">Title</label>
                     <input type="text" id="form4Example1" class="form-control" name="title">
+
+                    <label class="form-label" for="form4Example1">Author</label>
+                    <input type="text" id="form4Example1" class="form-control" name="author" required>
                     
                     </div>
         
@@ -38,6 +41,7 @@
       <thead>
         <tr>
           <th scope="col">Title</th>
+          <th scope="col">Author</th>
           <th scope="col">Date</th>
           <th scope="col">Content</th>
         </tr>
@@ -47,6 +51,7 @@
         { %>
           <tr>
             <td><%= a.title %></td>
+            <td><%= a.author %></td>
             <td><%= a.date %></td>
             <td><%= a.content %></td>
           </tr>

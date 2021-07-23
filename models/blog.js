@@ -1,23 +1,37 @@
-const articles = [];
+//use a schema model
 
-class Article
-{
-    constructor(title, date, content)
-    {
-        this.title = title;
-        this.date = date;
-        this.content = content;
-    }
+const mongoose = require('mongoose');
 
-    save()
-    {
-        articles.push(this);
-    }
+var articleSchema = new mongoose.Schema({
+    title: {type: String},
+    author: {type: String},
+    date: {type: String},
+    content: {type: String}
+});
 
-    findAll()
-    {
-        return articles;
-    }
-}
+module.exports = mongoose.model('Article', articleSchema);
 
-module.exports = Article;
+
+// const articles = [];
+
+// class Article
+// {
+//     constructor(title, date, content)
+//     {
+//         this.title = title;
+//         this.date = date;
+//         this.content = content;
+//     }
+
+//     save()
+//     {
+//         articles.push(this);
+//     }
+
+//     findAll()
+//     {
+//         return articles;
+//     }
+// }
+
+// module.exports = Article;
